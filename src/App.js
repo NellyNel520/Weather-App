@@ -15,6 +15,18 @@ function App() {
       setLocation('')
     }
   }
+  //dateBuilder function to log current date
+  const dateBuilder = (d) => {
+    let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+
+    let day = days[d.getDay()];
+    let date = d.getDate();
+    let month = months[d.getMonth()];
+    let year = d.getFullYear();
+
+    return `${day} ${date} ${month} ${year}`
+  }
   return (
     <div className="app">
     <div className="search">
@@ -28,6 +40,7 @@ function App() {
         <div className="top">
           <div className="location">
             <p>{data.name}</p>
+            <p className="date">{dateBuilder(new Date())}</p>
           </div>
           <div className="temp">
           {data. main ? <h1>{data.main.temp}°F</h1> : null}
