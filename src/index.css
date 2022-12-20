@@ -22,18 +22,22 @@ h1 {
   font-size: 6rem;
 }
 
+
 .app{
   width: 100%;
   height: 100vh;
-  position: relative;
-  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
   color: #fff;
+  background: url('https://cdn.pixabay.com/photo/2014/03/16/12/51/sunset-288531_1280.jpg');
+  background-size: cover;
 }
+
+
 
 .app:before{
   content: '';
-  background: url('') no-repeat center center/cover;
   position: absolute;
+  background-color: rgba(0, 0, 0, 0.6);
   width: 100%;
   height: 100%;
   top: 0;
@@ -89,6 +93,10 @@ h1 {
   padding: 1rem;
   border-radius: 12px;
   background-color: rgba(255, 255, 255, 0.2);
+}
+
+.city {
+  font-size: 4rem;
 }
 
 .bold{
